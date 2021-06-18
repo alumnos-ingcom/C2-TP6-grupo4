@@ -49,7 +49,7 @@ def copiar_archivo_codificado(nombre_archivo_entrada,rotacion):
     try:
         archivo_entrada= open(nombre_archivo_entrada, 'r')
         archivo_salida = open(nombre_archivo_entrada+".cesar",'w')
-        contenido_archivo_codificado= cifrado_del_cesar(archivo_entrada.read())
+        contenido_archivo_codificado= cifrado_del_cesar(archivo_entrada.read(),rotacion)
         archivo_salida.write(contenido_archivo_codificado)
         archivo_entrada.close()
         archivo_salida.close()

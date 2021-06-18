@@ -52,7 +52,7 @@ def copiar_archivo_decodificado(nombre_archivo_entrada,rotacion):
     try:
         archivo_entrada= open(nombre_archivo_entrada, 'r')
         archivo_salida = open(nombre_archivo_entrada+".decode",'w')
-        contenido_archivo_decodificado= descifrado_del_cesar(archivo_entrada.read())
+        contenido_archivo_decodificado= descifrado_del_cesar(archivo_entrada.read(),rotacion)
         archivo_salida.write(contenido_archivo_decodificado)
         archivo_entrada.close()
         archivo_salida.close()
